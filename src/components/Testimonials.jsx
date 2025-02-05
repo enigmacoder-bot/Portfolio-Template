@@ -49,12 +49,12 @@ const Testimonials = () => {
   return (
     <section className=" py-12">
       <div className="container mx-auto px-4 lg:px-8">
-        <h2 className="text-3xl font-bold text-center text-white sm:text-4xl">
+        {/* <h2 className="text-3xl font-bold text-center text-white sm:text-4xl">
           Don't just take our word for it...
-        </h2>
-        <p className="mt-4 text-center text-gray-100">
+        </h2> */}
+        {/* <p className="mt-4 text-center text-gray-100">
           See what our clients have to say about us.
-        </p>
+        </p> */}
         <div className="relative mt-8">
           <div ref={sliderRef} className="keen-slider">
             {testimonials.map((testimonial, index) => (

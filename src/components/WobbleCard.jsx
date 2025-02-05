@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-
+import StackIcon from "tech-stack-icons";
 export const WobbleCard = ({ children, containerClassName, className }) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
@@ -43,9 +43,10 @@ export const WobbleCard = ({ children, containerClassName, className }) => {
               : "translate3d(0px, 0px, 0) scale3d(1, 1, 1)",
             transition: "transform 0.1s ease-out",
           }}
-          className={`h-full px-4 py-20 sm:px-10 ${className}`}
+          className={`h-full px-4 py-20 sm:px-10 sm:py-10 ${className}`}
         >
           <Noise />
+
           {children}
         </motion.div>
       </div>

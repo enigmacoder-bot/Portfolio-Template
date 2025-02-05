@@ -89,7 +89,7 @@ function Dock({
   );
 }
 
-function DockItem({ children, className = "" }) {
+function DockItem({ children, className = "", onClick }) {
   const ref = useRef(null);
   const { distance, magnification, mouseX, spring } = useDock();
   const isHovered = useMotionValue(0);
@@ -119,6 +119,7 @@ function DockItem({ children, className = "" }) {
       role="button"
       aria-haspopup="true"
       z-index="999"
+      onClick={onClick} // Add onClick handler here
     >
       {Children.map(children, (child) =>
         cloneElement(child, { width, isHovered })
@@ -177,42 +178,36 @@ const data = [
     icon: (
       <HomeIcon className="h-full w-full text-neutral-600 dark:text-neutral-300" />
     ),
-    href: "#",
+    href: "#home",
   },
   {
-    title: "Products",
+    title: "Projects",
     icon: (
       <Package className="h-full w-full text-neutral-600 dark:text-neutral-300" />
     ),
-    href: "#",
+    href: "#projects",
   },
   {
-    title: "Components",
+    title: "Skills",
     icon: (
       <Component className="h-full w-full text-neutral-600 dark:text-neutral-300" />
     ),
-    href: "#",
+    href: "#skills",
   },
+
   {
-    title: "Activity",
-    icon: (
-      <Activity className="h-full w-full text-neutral-600 dark:text-neutral-300" />
-    ),
-    href: "#",
-  },
-  {
-    title: "Change Log",
+    title: "Testimonials",
     icon: (
       <ScrollText className="h-full w-full text-neutral-600 dark:text-neutral-300" />
     ),
-    href: "#",
+    href: "#testimonials",
   },
   {
-    title: "Email",
+    title: "Contact",
     icon: (
       <Mail className="h-full w-full text-neutral-600 dark:text-neutral-300" />
     ),
-    href: "#",
+    href: "#contact",
   },
   {
     title: "Theme",
@@ -224,13 +219,25 @@ const data = [
 ];
 
 export function AppleStyleDock() {
+  const handleClick = (e, href) => {
+    e.preventDefault();
+    if (href === "#home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      document.querySelector(href).scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className=" margin-0 top-[0px]">
+    <div className="hidden sm:block margin-0 top-[0px]">
+      {" "}
+      {/* Hide on small devices */}
       <Dock className="items-end pb-3">
         {data.map((item, idx) => (
           <DockItem
             key={idx}
             className="aspect-square rounded-full bg-gray-200 dark:bg-neutral-800"
+            onClick={(e) => handleClick(e, item.href)}
           >
             <DockLabel>{item.title}</DockLabel>
             <DockIcon>{item.icon}</DockIcon>

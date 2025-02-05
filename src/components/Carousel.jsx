@@ -115,16 +115,34 @@ export const Card = ({ card, index }) => {
     <>
       <AnimatePresence>
         {open && (
-          <div className="fixed inset-0 h-screen z-50 overflow-auto">
+          <div
+            className="fixed inset-0 h-screen z-50 overflow-auto"
+            onClick={handleClose}
+          >
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              exit={{
+                opacity: 0,
+                transition: { duration: 0.3, ease: "easeInOut" },
+              }}
               className="bg-black h-full w-full fixed inset-0"
             />
             <motion.div
               ref={containerRef}
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{
+                scale: 1,
+                opacity: 1,
+                transition: { duration: 0.3, ease: "easeInOut" },
+              }}
+              exit={{
+                scale: 0.95,
+                opacity: 0,
+                transition: { duration: 0.3, ease: "easeInOut" },
+              }}
               className="max-w-5xl mx-auto bg-[#000000] dark:bg-[#000000] h-fit z-[60] my-10 p-4 rounded-3xl relative"
+              onClick={(e) => e.stopPropagation()}
             >
               <button
                 className="sticky top-4 h-8 w-8 right-0 ml-auto bg-black rounded-full"
@@ -132,13 +150,7 @@ export const Card = ({ card, index }) => {
               >
                 <IconX className="h-6 w-6 text-neutral-100" />
               </button>
-              <p className="text-base font-medium text-black">
-                {card.category}
-              </p>
-              <p className="text-2xl font-semibold text-neutral-700 mt-4">
-                {card.title}
-              </p>
-              <div className="py-10">{card.content}</div>
+              <DummyContent card={card} />
             </motion.div>
           </div>
         )}
@@ -164,34 +176,30 @@ export const Card = ({ card, index }) => {
   );
 };
 
-export const DummyContent = () => {
+export const DummyContent = ({ card }) => {
   return (
-    <>
-      {[...new Array(3).fill(1)].map((_, index) => {
-        return (
-          <div
-            key={"dummy-content" + index}
-            className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
-          >
-            <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
-              <span className="font-bold text-neutral-700 dark:text-neutral-200">
-                The first rule of Apple club is that you boast about Apple club.
-              </span>{" "}
-              Keep a journal, quickly jot down a grocery list, and take amazing
-              class notes. Want to convert those notes to text? No problem.
-              Langotiya jeetu ka mara hua yaar is ready to capture every
-              thought.
-            </p>
-            <img
-              src="https://assets.aceternity.com/macbook.png"
-              alt="Macbook mockup from Aceternity UI"
-              height="500"
-              width="500"
-              className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
-            />
-          </div>
-        );
-      })}
-    </>
+    <div className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4">
+      <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
+        <span className="font-bold text-neutral-700 dark:text-neutral-200">
+          {card.title}
+        </span>{" "}
+        {card.description}
+      </p>
+      <img
+        src={card.src}
+        alt={card.title}
+        height="500"
+        width="500"
+        className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
+      />
+      <a
+        href={card.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-500 dark:text-blue-400 underline mt-4 block text-center"
+      >
+        See the preview of the project
+      </a>
+    </div>
   );
 };
