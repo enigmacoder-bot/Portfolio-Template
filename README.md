@@ -97,6 +97,10 @@ You can deploy your portfolio to Vercel or Netlify with ease.
 
 Congratulations! You have successfully set up, customized, and deployed your personal portfolio using the React Portfolio Template. Feel free to explore and enhance the template to better suit your needs. Happy coding!
 
+## Preview
+
+https://portfolio-template-alpha-ruddy.vercel.app/
+
 ## Built Using
 
 This portfolio template is built using components from [Aceternity UI](https://ui.aceternity.com/).
