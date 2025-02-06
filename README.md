@@ -44,26 +44,6 @@ Follow these steps to get started with the React-Portfolio Template:
 
    Open your browser and navigate to `http://localhost:3000` to view your portfolio.
 
-## Project Structure
-
-The project structure is as follows:
-
-```
-react-portfolio-template/
-├── public/
-│   ├── favicon.ico
-│   └── index.html
-├── src/
-│   ├── components/
-│   ├── App.jsx
-│   ├── index.css
-│   ├── main.jsx
-│   └── ...other files
-├── .gitignore
-├── package.json
-└── README.md
-```
-
 ## Customization
 
 To customize your portfolio, follow these steps:
