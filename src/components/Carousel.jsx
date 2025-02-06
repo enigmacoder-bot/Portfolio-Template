@@ -141,7 +141,7 @@ export const Card = ({ card, index }) => {
                 opacity: 0,
                 transition: { duration: 0.3, ease: "easeInOut" },
               }}
-              className="max-w-5xl mx-auto bg-[#000000] dark:bg-[#000000] h-fit z-[60] my-10 p-4 rounded-3xl relative"
+              className="max-w-5xl mx-auto bg-[#000000] h-fit z-[60] my-10 p-4 rounded-3xl relative"
               onClick={(e) => e.stopPropagation()}
             >
               <button
@@ -178,11 +178,9 @@ export const Card = ({ card, index }) => {
 
 export const DummyContent = ({ card }) => {
   return (
-    <div className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4">
-      <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
-        <span className="font-bold text-neutral-700 dark:text-neutral-200">
-          {card.title}
-        </span>{" "}
+    <div className="bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4">
+      <p className="text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
+        <span className="font-bold text-neutral-200">{card.title}</span>{" "}
         {card.description}
       </p>
       <img
@@ -196,7 +194,7 @@ export const DummyContent = ({ card }) => {
         href={card.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-blue-500 dark:text-blue-400 underline mt-4 block text-center"
+        className="text-blue-400 underline mt-4 block text-center"
       >
         See the preview of the project
       </a>

@@ -19,7 +19,7 @@ export const Typewriter = ({ words, className, cursorClassName }) => {
               {word.text.map((char, index) => (
                 <span
                   key={`char-${index}`}
-                  className={`dark:text-white text-black ${word.className}`}
+                  className={`text-white ${word.className}`}
                 >
                   {char}
                 </span>
@@ -98,10 +98,7 @@ export const TypewriterEffectSmooth = ({
               className={`inline-block ${word.className}`}
             >
               {word.text.map((char, index) => (
-                <span
-                  key={`char-${index}`}
-                  className="dark:text-white text-black"
-                >
+                <span key={`char-${index}`} className="text-white">
                   {char}
                 </span>
               ))}

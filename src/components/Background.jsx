@@ -4,7 +4,7 @@ import React from "react";
 export const Background = ({ children, className = "", svgOptions = {} }) => {
   return (
     <div
-      className={`relative h-[20rem] md:h-screen w-full bg-white dark:bg-black ${className}`}
+      className={`relative h-[20rem] md:h-screen w-full bg-black ${className}`}
     >
       <SVG svgOptions={svgOptions} />
       {children}

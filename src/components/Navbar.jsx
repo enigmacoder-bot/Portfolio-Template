@@ -76,7 +76,7 @@ function Dock({
           isHovered.set(0);
           mouseX.set(Infinity);
         }}
-        className={`mx-auto flex w-fit gap-4 rounded-2xl bg-gray-50 px-4 dark:bg-neutral-900 ${className}`}
+        className={`mx-auto flex w-fit gap-4 rounded-2xl bg-neutral-900 ${className}`}
         style={{ height: panelHeight }}
         role="toolbar"
         aria-label="Application dock"
@@ -147,7 +147,7 @@ function DockLabel({ children, className = "", ...rest }) {
           animate={{ opacity: 1, y: -10 }}
           exit={{ opacity: 0, y: 0 }}
           transition={{ duration: 0.2 }}
-          className={`absolute -top-6 left-1/2 w-fit whitespace-pre rounded-md border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs text-neutral-700 dark:border-neutral-900 dark:bg-neutral-800 dark:text-white ${className}`}
+          className={`absolute -top-6 left-1/2 w-fit whitespace-pre rounded-md border px-2 py-0.5 text-xs border-neutral-900bg-neutral-800 text-white ${className}`}
           role="tooltip"
           style={{ x: "-50%" }}
         >
@@ -175,45 +175,33 @@ function DockIcon({ children, className = "", ...rest }) {
 const data = [
   {
     title: "Home",
-    icon: (
-      <HomeIcon className="h-full w-full text-neutral-600 dark:text-neutral-300" />
-    ),
+    icon: <HomeIcon className="h-full w-full text-neutral-300" />,
     href: "#home",
   },
   {
     title: "Projects",
-    icon: (
-      <Package className="h-full w-full text-neutral-600 dark:text-neutral-300" />
-    ),
+    icon: <Package className="h-full w-full text-neutral-300" />,
     href: "#projects",
   },
   {
     title: "Skills",
-    icon: (
-      <Component className="h-full w-full text-neutral-600 dark:text-neutral-300" />
-    ),
+    icon: <Component className="h-full w-full text-neutral-300" />,
     href: "#skills",
   },
 
   {
     title: "Testimonials",
-    icon: (
-      <ScrollText className="h-full w-full text-neutral-600 dark:text-neutral-300" />
-    ),
+    icon: <ScrollText className="h-full w-full text-neutral-300" />,
     href: "#testimonials",
   },
   {
     title: "Contact",
-    icon: (
-      <Mail className="h-full w-full text-neutral-600 dark:text-neutral-300" />
-    ),
+    icon: <Mail className="h-full w-full text-neutral-300" />,
     href: "#contact",
   },
   {
     title: "Theme",
-    icon: (
-      <SunMoon className="h-full w-full text-neutral-600 dark:text-neutral-300" />
-    ),
+    icon: <SunMoon className="h-full w-full text-neutral-300" />,
     href: "#",
   },
 ];
@@ -236,7 +224,7 @@ export function AppleStyleDock() {
         {data.map((item, idx) => (
           <DockItem
             key={idx}
-            className="aspect-square rounded-full bg-gray-200 dark:bg-neutral-800"
+            className="aspect-square rounded-full bg-neutral-800"
             onClick={(e) => handleClick(e, item.href)}
           >
             <DockLabel>{item.title}</DockLabel>
