@@ -43,7 +43,8 @@ Follow these steps to get started with the React-Portfolio Template:
    npm run dev
    ```
 
-   Open your browser and navigate to `http://localhost:3000` to view your portfolio.
+   Open your
+   browser and navigate to `http://localhost:3000` to view your portfolio.
 
 ## Customization
 
