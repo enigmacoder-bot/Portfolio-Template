@@ -23,8 +23,8 @@ Follow these steps to get started with the React-Portfolio Template:
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/your-username/react-portfolio-template.git
-   cd react-portfolio-template
+   git clone https://github.com/enigmacoder-bot/Portfolio-Template.git
+   cd Portfolio-Template
    ```
 
 2. **Install Dependencies**
@@ -42,9 +42,6 @@ Follow these steps to get started with the React-Portfolio Template:
    ```bash
    npm run dev
    ```
-
-   Open your
-   browser and navigate to `http://localhost:3000` to view your portfolio.
 
 ## Customization
 
@@ -96,37 +93,9 @@ You can deploy your portfolio to Vercel or Netlify with ease.
 
    Follow the prompts to deploy your portfolio. Vercel will automatically build and deploy your project.
 
-### Deploy to Netlify
-
-1. **Install Netlify CLI**
-
-   If you don't have the Netlify CLI installed, you can install it globally:
-
-   ```bash
-   npm install -g netlify-cli
-   ```
-
-2. **Build the Project**
-
-   Build the project for production:
-
-   ```bash
-   npm run build
-   ```
-
-3. **Deploy**
-
-   Run the following command to deploy your portfolio:
-
-   ```bash
-   netlify deploy
-   ```
-
-   Follow the prompts to complete the deployment.
-
 ## Conclusion
 
-Congratulations! You have successfully set up, customized, and deployed your personal portfolio using the React-Portfolio Template. Feel free to explore and enhance the template to better suit your needs. Happy coding!
+Congratulations! You have successfully set up, customized, and deployed your personal portfolio using the React Portfolio Template. Feel free to explore and enhance the template to better suit your needs. Happy coding!
 
 ## Built Using
 
