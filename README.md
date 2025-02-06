@@ -86,19 +86,15 @@ You can deploy your portfolio to Vercel or Netlify with ease.
 
 1. **Login to Vercel**
 
-   Login to Vercel using your GitHub account:
-
-   ```bash
-   vercel login
-   ```
+   Go to [Vercel](https://vercel.com/) and login using your GitHub account.
 
 2. **Create a New Project**
 
-   Create a new project on Vercel and connect it to your GitHub repository.
+   Click on "New Project" and import your GitHub repository.
 
 3. **Deploy**
 
-   Deploy your portfolio by following the prompts on Vercel.
+   Follow the prompts to deploy your portfolio. Vercel will automatically build and deploy your project.
 
 ### Deploy to Netlify
 
