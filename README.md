@@ -10,6 +10,7 @@ Welcome to the React-Portfolio Template! This guide will help you set up, custom
 4. [Customization](#customization)
 5. [Deployment](#deployment)
 6. [Conclusion](#conclusion)
+7. [Built Using](#built-using)
 
 ## Introduction
 
@@ -64,25 +65,39 @@ To customize your portfolio, follow these steps:
 
 You can deploy your portfolio to Vercel or Netlify with ease.
 
+### Upload to GitHub
+
+1. **Create a New Repository**
+
+   Create a new repository on GitHub to host your portfolio code.
+
+2. **Push Your Code**
+
+   Push your customized portfolio code to the new GitHub repository:
+
+   ```bash
+   git remote add origin https://github.com/your-username/your-repo-name.git
+   git branch -M main
+   git push -u origin main
+   ```
+
 ### Deploy to Vercel
 
-1. **Install Vercel CLI**
+1. **Login to Vercel**
 
-   If you don't have the Vercel CLI installed, you can install it globally:
-
-   ```bash
-   npm install -g vercel
-   ```
-
-2. **Deploy**
-
-   Run the following command to deploy your portfolio:
+   Login to Vercel using your GitHub account:
 
    ```bash
-   vercel
+   vercel login
    ```
 
-   Follow the prompts to complete the deployment.
+2. **Create a New Project**
+
+   Create a new project on Vercel and connect it to your GitHub repository.
+
+3. **Deploy**
+
+   Deploy your portfolio by following the prompts on Vercel.
 
 ### Deploy to Netlify
 
@@ -115,3 +130,7 @@ You can deploy your portfolio to Vercel or Netlify with ease.
 ## Conclusion
 
 Congratulations! You have successfully set up, customized, and deployed your personal portfolio using the React-Portfolio Template. Feel free to explore and enhance the template to better suit your needs. Happy coding!
+
+## Built Using
+
+This portfolio template is built using components from [Aceternity UI](https://ui.aceternity.com/).
